@@ -13,27 +13,27 @@
             <input oncanplay="showValue(value)" type="text" placeholder="0" id="input" class="result" readonly="true">
         </div>
         <div class="wrap-left__operators">
-            <button>AC</button>
-            <button>*</button>
-            <button>/</button>
+            <button type="button" onclick="clickOperator()" value="AC">AC</button>
+            <button type="button" onclick="clickOperator()" value="*">*</button>
+            <button type="button" onclick="clickOperator()" value="/">/</button>
         </div>
         <div class="wrap-left__numbers">
-            <button type="button" onclick="clickDigit()" value="7">7</button>
-            <button type="button" onclick="clickDigit()" value="8">8</button>
-            <button type="button" onclick="clickDigit()" value="9">9</button>
-            <button type="button" onclick="clickDigit()" value="4">4</button>
-            <button type="button" onclick="clickDigit()" value="5">5</button>
-            <button type="button" onclick="clickDigit()" value="6">6</button>
-            <button type="button" onclick="clickDigit()" value="3">3</button>
-            <button type="button" onclick="clickDigit()" value="2">2</button>
-            <button type="button" onclick="clickDigit()" value="1">1</button>
-            <button type="button" onclick="clickDigit()" value="0">0</button>
+            <button type="button" onclick="clickDigit(value)" value="7">7</button>
+            <button type="button" onclick="clickDigit(value)" value="8">8</button>
+            <button type="button" onclick="clickDigit(value)" value="9">9</button>
+            <button type="button" onclick="clickDigit(value)" value="4">4</button>
+            <button type="button" onclick="clickDigit(value)" value="5">5</button>
+            <button type="button" onclick="clickDigit(value)" value="6">6</button>
+            <button type="button" onclick="clickDigit(value)" value="3">3</button>
+            <button type="button" onclick="clickDigit(value)" value="2">2</button>
+            <button type="button" onclick="clickDigit(value)" value="1">1</button>
+            <button type="button" onclick="clickDigit(value)" value="0">0</button>
             <button type="button" value=".">.</button>
         </div>
         <div class="wrap-right__operators">
-                <button type="button" value="+">+</button>
-                <button type="button" value="-">-</button>
-                <button type="button" value="=">=</button>
+                <button type="button" onclick="clickOperator()" value="+">+</button>
+                <button type="button" onclick="clickOperator()" value="-">-</button>
+                <button type="button" onclick="clickOperator()" value="=">=</button>
         </div>
 
     </div>
