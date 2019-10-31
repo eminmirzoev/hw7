@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator__screen">
+            <input type="text" id="input" name="calculater__screen__input" value="0" readonly>
+        </div>
+        <div class="calculater__key">
+            <div class="button__AC">
+                <button class="AC" value="AC" onclick="clearAll()">AC</button>
+            </div>
+            <div class="calculater__num__oper">
+                <input type="button" value="7" onclick="clickDigit(value)">
+                <input type="button" value="8" onclick="clickDigit(value)">
+                <input type="button" value="9" onclick="clickDigit(value)">
+                <input type="button" value="+" onclick="clickOperator(value)">
+                <input type="button" value="4" onclick="clickDigit(value)">
+                <input type="button" value="5" onclick="clickDigit(value)">
+                <input type="button" value="6" onclick="clickDigit(value)">
+                <input type="button" value="-" onclick="clickOperator(value)">
+                <input type="button" value="1" onclick="clickDigit(value)">
+                <input type="button" value="2" onclick="clickDigit(value)">
+                <input type="button" value="3" onclick="clickDigit(value)">
+                <input type="button" value="*" onclick="clickOperator(value)">
+                <input type="button" value="0" onclick="clickDigit(value)">
+                <input type="button" value="." onclick="clickDigit(value)">
+                <input type="button" class="red" value="=" onclick="clickOperator(value)">
+                <input type="button" value="/" onclick="clickOperator(value)">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
