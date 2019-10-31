@@ -1,40 +1,89 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 body {
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    min-height: 100%;
+	background: rgb(63,94,251);
+	background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	margin: 0;
+	padding: 0;
 }
 
 .calculator {
-    width: 300px;
-    box-shadow: 0 10px 28px #d8724a;
-    margin: 30px auto;
-    position: absolute;
-    overflow: hidden;
-    border-radius: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -62%);
-  }
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+	border-radius: 14px;
+	padding-bottom: 20px;
+	width: 320px;
+	
+}
+.calculator__screen {
+	width: 100%;
+	height: 60px;
+	padding: 40px 0;
+	background: #FF0509;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+}
+.calculater__key {
+	padding: 20px 20px 0 20px;
+}
+.calculater__num__oper {
+	width: 280px;
+	float: left;
+}
 
-.calculator-screen {
-    padding: 15px 28px;
-    height: 69px;
-    text-align: right;
-    font-size: 29px;
-    color: #4c455a;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 2px 3px #d8724a;
-    transition: color .6s ease-in-out;
-  
-    &::after {
-        content: '';
-        display: table;
-        clear: both;
-    }
+.AC {
+	width: 100%;
+	height: 60px;
+	padding: 0;
+	margin: 5px;
+	background: #ecedef;
+	border: none;
+	font-size: 30px;
+	line-height: 30px;
+	border-radius: 5%;
+	font-weight: 700;
+	color: #000;
+	cursor: pointer;
+}
+
+input[type=button] {
+	width: 60px;
+	height: 60px;
+	float: left;
+	padding: 0;
+	margin: 5px;
+	box-sizing: border-box;
+	background: #ecedef;
+	border: none;
+	font-size: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	font-weight: 700;
+	color: #000;
+	cursor: pointer;
+}
+
+#input[type=text] {
+	width: 270px;
+	height: 60px;
+	float: left;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	background: none;
+	color: #ffffff;
+	text-align: right;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 60px;
+	margin: 0 25px;
+	
+}
+
+.red {
+    background: #FF0509 !important;
+    color: #ffffff !important;
+    
 }

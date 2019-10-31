@@ -4,7 +4,7 @@ let operator = '';
 let isSecond = false;
 const input = document.getElementById('input');
 
-const calculator = () => {
+const calculate= () => {
     switch(operator) {
         case '+':
             return firstNumber + secondNumber;
@@ -13,7 +13,7 @@ const calculator = () => {
         case '*':
             return firstNumber * secondNumber;
         case '/':
-            return !secondNumber ? 0: firstNumber / secondNumber;
+            return firstNumber / secondNumber;
         default:
             return 0;
     }
@@ -25,39 +25,37 @@ const showValue = value => {
 
 const clearAll = () => {
     showValue(0);
+
     firstNumber = 0;
     secondNumber = 0;
-    operator = 0;
+    operator = '';
 }
 
 const clickDigit = value => {
     if (isSecond) {
-    showValue(0);
-    isSecond = false;
+        showValue(0);
+        isSecond = false;
+    }
+    
+    let result = input.value + value;
+    let number = parseInt(result);
+
+    showValue(number);
+
+    if (!operator) {
+        firstNumber = number;
+    } else {
+        secondNumber = number;
     }
 }
-    
-let result = input.value + value;
-let number = parseInt(result);
-showValue(number);
-
-if (!operator) {
-    firstNumber = number;
-} else {
-    secondNumber = number;
-};
-    
-const operator = op => {
+const clickOperator = op => {
     if (op === '=') {
-const result = calculate();
+        const result = calculate();
 
-operator = "";
-showValue(result);
-} else {
-    operator = op;
-    isSecond = true;
+        operator = "";
+        showValue(result);
+    } else {
+        operator = op;
+        isSecond = true;
+    }
 }
-    
-const showValue = value => {
-    inputValue = parseInt(value);
-}}
