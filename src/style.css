@@ -1,4 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    min-height: 100%;
+}
+
+.calculator {
+    width: 300px;
+    box-shadow: 0 10px 28px #d8724a;
+    margin: 30px auto;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+  }
+
+.calculator-screen {
+    padding: 15px 28px;
+    height: 69px;
+    text-align: right;
+    font-size: 29px;
+    color: #4c455a;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 3px #d8724a;
+    transition: color .6s ease-in-out;
+  
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
